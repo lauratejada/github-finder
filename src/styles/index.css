@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+body {
+    color: #fff;
+    background: #1A1924;
+    background-image: url(../images/mosaic.jpg);
+    background-blend-mode: multiply;
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+.container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    align-content: center;
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+}
+
+section h1 {
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.search{
+    margin-top: 30px;
+    width: 400px;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+input[type='text'] {
+    padding: 10px 15px;
+    width: 70%;
+}
+
+input[type='text']:focus {
+    border-style: inset;
+    border: 2px solid #EB7407;
+}
+
+input[type='submit'], button {
+    padding: 10px 25px;
+    background-color: #EB7407;
+    text-transform: uppercase;
+    color: #fff;
+    width: calc(30% - 10px);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 5px;
+}
+
+input[type='submit']:hover , button:hover {
+    opacity: 0.7;
+}
+
+input ~ input {
+    margin-left: 10px;
+}
+
+.search > p {
+    height: 30px;
+}
+
+/*********************/
+/*      USER         */
+/*********************/
+section.user{
+    margin-top: 20px;
+}
+
+div.user-profile {
+    display: grid;
+    justify-content: center;
+}
+
+.user-profile > div {
+    text-align: center;
+    margin-top: 15px;
+}
+
+div.user-image, h2 {
+    text-align: center;
+}
+
+.user-image img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.user-name > h2 {
+    font-size: 34px;
+    letter-spacing: 0.8px;
+}
+
+button {
+    width: 200px;
+}
+
+div.user-profile-data {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+}
+
+.user-profile-data > div ~ .user-profile-data > div {
+    margin-left: 10px;
+}
+
+.user-repositories{
+    margin-top: 50px;
+    display: grid;
+    place-content: center;
+}
+
+.user-profile-data > div > span {
+    color: #03F577;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.user-profile-data > div > p {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.repository-data{
+    background-color: #353341;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.repo-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repo-title a {
+    color: #03F577;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.repo-description {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.repo-date {
+    color: #cfcfcf ;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.grid {
+    display: grid;
+
+    /* this helps to reorganize the grid on mobile and destops autotically */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 70vw)); 
+   
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 20px;
+    margin-top: 10px;
+}
